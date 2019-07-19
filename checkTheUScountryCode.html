@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra Mã quốc gia nước Mỹ</title>
+</head>
+<p>Viết chương trình kiểm tra giá trị đưa vào có phải là mã quốc gia nước Mỹ hay không?</p>
+<input type="number" id="str" oninput="checkCodeUSD()" placeholder="enter code here">
+<p id="kq"></p>
+<body>
+<script>
+    function checkCodeUSD() {
+        let str=parseInt(document.getElementById('str').value);
+regexp=/^[0-9]{5}(?:-[0-9]{4})?$/;
+        if (regexp.test(str)){
+    document.getElementById("kq").innerText= "TRUE";
+    return true;
+    }else{
+            document.getElementById("kq").innerText= "FALSE";
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
